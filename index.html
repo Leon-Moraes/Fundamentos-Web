@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" >
     <title>Meu Perfil</title>
 </head>
 <body>
-    <ul>
+    <ul id="menu">
         <li>
             <a href = "index.html"> Home </a>
         </li>
@@ -16,22 +17,47 @@
         </li>
     </ul>
 
-    <h1>Sobre o Leonardo</h1>
-    <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae perferendis similique temporibus quis consequatur!
-        Ab soluta quod cum reiciendis, recusandae, 
-        accusamus suscipit possimus nam vitae iusto, quisquam laudantium nihil accusantium.
-    </p>
+    <h1 class="center">Sobre o Leonardo</h1>
 
-    <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi velit deleniti voluptates quae incidunt numquam,
-        tempore reprehenderit! Eligendi magnam eaque sint vero incidunt quis ea ad exercitationem, quam quod. In?
-    </p>
-    <img src ="assets/img/002d5714c44f88a16c1f0bdfa97ca05e.jpg" alt="foto do criador desse conteudo">
+    <div class="container">
+        <div class="justify">
+            <p class="center">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae perferendis similique temporibus quis consequatur!
+                Ab soluta quod cum reiciendis, recusandae, 
+                accusamus suscipit possimus nam vitae iusto, quisquam laudantium nihil accusantium.
+            </p>
+            <br>
+            <p class="justify">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi velit deleniti voluptates quae incidunt numquam,
+                tempore reprehenderit! Eligendi magnam eaque sint vero incidunt quis ea ad exercitationem, quam quod. In?
+            </p>
+        </div>
+    
+        <div > 
+            <img class="br-50 wh-300 p-30" src ="assets/img/002d5714c44f88a16c1f0bdfa97ca05e.jpg" alt="duck?">
+        </div>
+    </div>
+    <div class="container">
+        <h2 class="center"> Um video meio "Sei lá, sabe" </h2>
+   
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/DJfg39WkMvE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
 
-    <h2> Um video meio "Sei lá, sabe" </h2>
+    <hr>
+    <footer>
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/DJfg39WkMvE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="container">
+            <a href="https://github.com/Leon-Moraes" target="_blank">
+                <img class="tm-social p30" src="assets/img/github.png" alt="Logo GitHub">
+            </a>
+            <a href="https://www.linkedin.com/in/leommagalhaes/" target="_blank">
+                <img class="tm-social p30" src="assets/img/linkedin (1).png" alt="Logo Linkedin">
+            </a>
 
+        </div>
+        <p class="center">
+            Todos os direitos reservados: Leonardo de Moraes &copy
+        </p>
+    </footer>
 </body>
 </html>
