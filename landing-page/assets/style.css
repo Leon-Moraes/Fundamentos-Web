@@ -1,0 +1,51 @@
+hr {
+    border: 1px solid whitesmoke;
+}
+.sobre {
+    display: flex;
+    flex-direction: row;
+}
+.link:hover {
+    color: #3a4147;
+}
+.slides {
+    height: 50%;
+    width: auto;
+}
+.bg-colour {
+    background-color: #23272b;
+}
+.nav-item:hover {
+    background-color: #23272b;
+    border-radius: 5%;
+}
+.img-column img{
+    width: 200px;
+    height: 200px;
+}
+.formulario {
+    width: 100%;
+}
+.titulos {
+   background-color: #B9B9B9;
+   text-align: center;
+}
+.texto {
+    width: 50%;
+}
+
+@media only screen and (max-width: 1400px) {
+    .sobre {
+        flex-direction: column;
+
+    }
+    .sobre-div {
+        margin-right: none;
+    }
+    .img1 {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
