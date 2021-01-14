@@ -1,63 +1,110 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css" >
-    <title>Meu Perfil</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Bootstrap</title>
+   <!--Link para pegar o estilo CSS dos setvidores qdo Bootstrap-->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 <body>
-    <ul id="menu">
-        <li>
-            <a href = "index.html"> Home </a>
-        </li>
-        
-        <li>
-            <a href = "contato.html"> Contato </a>
-        </li>
-    </ul>
-
-    <h1 class="center">Sobre o Leonardo</h1>
-
-    <div class="container">
-        <div class="justify">
-            <p class="center">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae perferendis similique temporibus quis consequatur!
-                Ab soluta quod cum reiciendis, recusandae, 
-                accusamus suscipit possimus nam vitae iusto, quisquam laudantium nihil accusantium.
-            </p>
-            <br>
-            <p class="justify">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi velit deleniti voluptates quae incidunt numquam,
-                tempore reprehenderit! Eligendi magnam eaque sint vero incidunt quis ea ad exercitationem, quam quod. In?
-            </p>
-        </div>
+<!--Menu-->
+   <nav class="navbar navbar-expand-lg navbar-light bg-info">
+      <a class="navbar-brand" href="#">Olá Mundo</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
     
-        <div > 
-            <img class="br-50 wh-300 p-30" src ="assets/img/002d5714c44f88a16c1f0bdfa97ca05e.jpg" alt="duck?">
-        </div>
-    </div>
+      <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link text-light" href="#">Home <span class="sr-only">(página atual)</span></a>
+          </li>
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Redes sociais
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Facebook</a>
+              <a class="dropdown-item" href="#">Instagram</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">LinkedIn</a>
+            </div>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+          <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Pesquisar</button>
+        </form>
+      </div>
+    </nav>
+<!--/Menu-->
+
+<!--Grid-->
     <div class="container">
-        <h2 class="center"> Um video meio "Sei lá, sabe" </h2>
-   
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/DJfg39WkMvE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      <div class="row mt-5 d-flex justify-content-center">
+
+         <div class="col-md-4 p-0">
+            <div class="bg-danger">4 colunas</div>
+         </div>
+
+         <div class="col-md-4 p-0">
+            <div class="bg-warning">4 colunas</div>
+         </div>
+
+         <div class="col-md-4 p-0">
+            <div class="bg-info">4 colunas</div>
+         </div>
+
+      </div>
+
+      <div class="row mt-5 d-flex justify-content-center">
+
+         <div class="col-md-6 p-0">
+            <div class="bg-danger">6 colunas</div>
+         </div>
+
+         <div class="col-md-6 p-0">
+            <div class="bg-warning">6 colunas</div>
+         </div>
+
+      </div>
+
+      <div class="row mt-5 d-flex justify-content-center">
+
+         <div class="col-md-8 p-0">
+            <div class="bg-danger">8 colunas</div>
+         </div>
+
+         <div class="col-md-4 p-0">
+            <div class="bg-warning">4 colunas</div>
+         </div>
+
+      </div>
+
+      <div class="row mt-5 d-flex justify-content-center">
+
+         <div class="col-md-6 p-0">
+            <div class="bg-danger">6 colunas</div>
+         </div>
+
+         <div class="col-md-4 p-0">
+            <div class="bg-warning">5 colunas</div>
+         </div>
+
+      </div>
+
     </div>
+<!--/Grid-->
 
-    <hr>
-    <footer>
 
-        <div class="container">
-            <a href="https://github.com/Leon-Moraes" target="_blank">
-                <img class="tm-social p30" src="assets/img/github.png" alt="Logo GitHub">
-            </a>
-            <a href="https://www.linkedin.com/in/leommagalhaes/" target="_blank">
-                <img class="tm-social p30" src="assets/img/linkedin (1).png" alt="Logo Linkedin">
-            </a>
 
-        </div>
-        <p class="center">
-            Todos os direitos reservados: Leonardo de Moraes &copy
-        </p>
-    </footer>
+
+    <!--Scripts necessário para utilização dos códigos JS do Bootstrap-->
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
 </html>

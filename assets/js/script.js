@@ -54,3 +54,9 @@ function enviar() {
         alert('preencha o formúlario corretamente antes de enviar.')
     }
 }
+function zoom() {
+
+}
+function normal() {
+
+}
