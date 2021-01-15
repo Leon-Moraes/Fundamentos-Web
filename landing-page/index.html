@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <link rel="stylesheet" href="assets/style.css">
+        <link rel="stylesheet" href="assets/css/style.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     
         <title>Landing Page</title>
@@ -13,8 +13,11 @@
 
     <body class="bg-colour">
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-            <a class="navbar-brand text-light ml-2" href="#">Home</a>
+        <nav class="navbar fixed-top navbar-expand-lg shadow-lg navbar-dark bg-dark">
+            <a class="navbar-brand text-light ml-2 psy-icon" href="#">
+                <img class="psy-icon-back" src="assets/img/psy-icon.png" width="60px" height="60px" alt="home">
+                <img class="psy-icon-front" src="assets/img/psy-icon2.png" width="60px" height="60px" alt="home">
+            </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -30,25 +33,40 @@
                     <a class="nav-link text-light" href="#fotos">Fotos</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-light disabled" href="#">Pokedex</a>
+                  <a class="nav-link text-light disabled" href="https://www.pokemon.com/br/pokedex/psyduck">Pokedex</a>
                 </li>
               </ul>
             </div>
         </nav>
+
+        <div>
+
+           
+        </div>
         <hr>
         <br>
         <div class="row justify-content-center">
-
-            <div class="col-lg-10 shadow-lg p-3 mb-5 rounded bg-dark">
+            <img src="assets/img/002d5714c44f88a16c1f0bdfa97ca05e.jpg">
+            <div id="sobre" class="col-lg-10 shadow-lg p-3 mb-5 mt-3 rounded bg-dark">
 
                 <!-- card -->
 
                 <div class="sobre">
-                    <div class="p-3 sobre-div">
-                        <img class="rounded img1" src="assets/img/002d5714c44f88a16c1f0bdfa97ca05e.jpg">
-
-                    </div>
-                    <div class="p-3 text-white" id="sobre">
+                    <div class="card p-4 mt-5" width="100%">
+                        <img class="card-img-top" src="assets/img/img7.png" alt="Card image cap">
+                        <div class="card-body">
+                          <p class="card-text">#54 Psyduck</p>
+                          <div class="d-flex flex-wrap justify-content-between">
+                              <div class="water rounded">
+                                  Water
+                              </div>
+                              <div class="psych rounded">
+                                  psychic
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                    <div class="p-3 text-white" >
                         <br>
                         <h1 class="titulos p-1 rounded">About... <span style="color: yellow;">Psyduck</span></h1>
                         <br>
@@ -106,12 +124,12 @@
                 </div>
                 <br>
                 <div class="row p-3 d-flex titulos shadow-lg rounded justify-content-center">
-                    <h2 id="fotos" class="text-black">Now, some photos of this cutie:</h2>
+                    <h2 class="text-black">Now, some photos of this cutie:</h2>
                 </div>
 
                 <hr>
                 <br>
-                <div class="row p-5 d-flex flex-wrap">
+                <div id="fotos" class="row p-5 d-flex flex-wrap">
                        
                     <div class="col-12 img-column">
 
@@ -155,39 +173,50 @@
                 </div>
                 <br>
                 <br>
-                <div class="row p-3 bg-dark d-flex flex-wrap justify-content-center">
+                <div class="row p-3 bg-dark f-flex flex-nowrap justify-content-between">
         
                     <div class="container bg-light rounded">
                         <br>
                         <form class="text-white">
-                            <input class="texto rounded" placeholder="nome" cols="60" type="text">
+                            <input id="nome" class="texto rounded" placeholder="name" cols="60" type="text" onkeyup="validaNome()">
+                            <div id="nomeForm"></div>
+                            <br>                          
+                            <input id="email" class="texto rounded" placeholder="Email" cols="60" type="text" onkeyup="validaEmail()">
+                            <div id="emailForm"></div>   
                             <br>
-                            <br>                            
-                            <input class="texto rounded" placeholder="Email" cols="60" type="text">   
-                            <br>
-                            <br> 
-                            <textarea class="formulario rounded" name="opiniao" placeholder="Tells us your opinion." id="assunto" cols="100%" rows="10" type="text"></textarea>
-                            <button class="btn btn-outline-dark" >Enviar</button>
+                            <textarea id="text" class="formulario rounded" name="opiniao" placeholder="Tells us your opinion." id="assunto" cols="50%" rows="10" type="text" maxlength="300" onkeypress="validaText()"></textarea>
+                            <button id="btn" class="btn btn-outline-dark">Enviar</button>
+                            <div id="textForm"></div>
                         </form>
+                        <br>
+                    </div>
+                    <hr>
+                    <br>
+                    <div class="container bg-light rounded">
+                        <br>
+                        <div>
+                            <img class="img-fluid" src="assets/img/psyduckfeatimage.jpg" width="700px" height="400px">
+                        </div>
                         <br>
                     </div>
                 </div>
                  </hr>
             </div>
         </div>
-        <footer class="bg-white d-flex justify-content-between">
-            <div class="">
-                <a href=""><img src="logo do linkedin" ></a>
-                <a href=""><img src="logo do linkedin" ></a>
+        <footer class="bg-white w-100 d-flex justify-content-between">
+            <div class="p-3 d-flex justify-content-between">
+                <a class="p-3 links" href=""><img src="assets/img/linkedin (1).png" width="50px" height="50"> Leonardo Moraes</a>
+                <a class="p-3 links" href=""><img src="assets/img/github-logo-silhouette-in-a-square.png" width="50px" height="50"> Leon-Moraes</a>
             </div>
-            <div class="text-black">
-                <p>Psyduck Corp. LTDA.   &copy</p>
+            <div class="p-3 d-flex justify-content-center text-black">
+                <p clasS="P-3">Psyduck Corp. LTDA.   &copy</p>
             </div>
         </footer>
 
-          <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+            <script src="assets/js/script.js"></script>
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
     </body>
 

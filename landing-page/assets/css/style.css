@@ -5,6 +5,15 @@ hr {
     display: flex;
     flex-direction: row;
 }
+.psych {
+    background-color: palevioletred;
+    padding: 1em 1em 1em;
+}
+.water {
+    background-color: blue;
+    padding: 1em 1em 1em;
+    color: white;
+}
 .link:hover {
     color: #3a4147;
 }
@@ -25,6 +34,11 @@ hr {
 }
 .formulario {
     width: 100%;
+    height: 100px;
+}
+.f-flex {
+    display: flex;
+    flex-direction: row;
 }
 .titulos {
    background-color: #B9B9B9;
@@ -33,8 +47,24 @@ hr {
 .texto {
     width: 50%;
 }
-
-@media only screen and (max-width: 1400px) {
+.psy-icon-front {
+    display: none;
+}
+.psy-icon:hover .psy-icon-back {
+    display: none;
+}
+.psy-icon:hover .psy-icon-front {
+    display: inline;
+    transition: 0.5s; 
+}
+.links {
+    text-decoration: none;
+    color: black;
+}
+.links:hover {
+    text-decoration: none;
+}
+@media only screen and (max-width: 800px) {
     .sobre {
         flex-direction: column;
 
@@ -45,6 +75,9 @@ hr {
     .img1 {
         width: 100%;
         height: auto;
+    }
+    .f-flex {
+        flex-direction: column;
     }
 }
 
